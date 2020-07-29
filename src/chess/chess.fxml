@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="516.0" style="-fx-background-image: 'images/board/board.png;'" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chess.Controller">
+   <children>
+      <ImageView fitHeight="514.0" fitWidth="518.0" layoutX="2.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/board/board2.png" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
+      <Button layoutX="6.0" layoutY="520.0" mnemonicParsing="false" onAction="#setStartingPosition" text="Starting position" />
+      <GridPane fx:id="gridPane" layoutX="29.0" layoutY="14.0" prefHeight="475.0" prefWidth="468.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="96.33334350585938" minWidth="10.0" prefWidth="62.333343505859375" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="69.0" minWidth="9.666656494140625" prefWidth="62.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="72.33335367838542" minWidth="0.0" prefWidth="58.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="103.33330790201822" minWidth="10.0" prefWidth="61.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.33331298828125" minWidth="10.0" prefWidth="57.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="105.0" minWidth="10.0" prefWidth="57.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="97.0" minWidth="10.0" prefWidth="62.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.3333740234375" minWidth="10.0" prefWidth="53.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="70.33332824707031" minHeight="10.0" prefHeight="58.666666666666664" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="146.66666666666669" minHeight="10.0" prefHeight="61.99999999999999" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="101.33334096272787" minHeight="0.0" prefHeight="53.9999974568685" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="129.99999999999997" minHeight="10.0" prefHeight="60.33333333333334" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="107.99998474121094" minHeight="10.0" prefHeight="59.66667683919269" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="86.33334350585938" minHeight="10.0" prefHeight="60.666646321614564" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="70.33332316080731" minHeight="10.0" prefHeight="56.66668701171875" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="65.33333333333331" minHeight="10.0" prefHeight="62.000020345052064" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <Button fx:id="startGameBtn" layoutX="229.0" layoutY="520.0" mnemonicParsing="false" onAction="#nextStep" text="&gt;" />
+      <Button layoutX="174.0" layoutY="520.0" mnemonicParsing="false" onAction="#setPrevious" text="&lt;" />
+      <Label fx:id="checkLbl" layoutX="449.0" layoutY="524.0" prefHeight="17.0" prefWidth="64.0" />
+      <Label fx:id="turnLbl" layoutX="409.0" layoutY="524.0" prefHeight="17.0" prefWidth="36.0" />
+      <Button layoutX="282.0" layoutY="520.0" mnemonicParsing="false" onAction="#goThroughGame" text="+" />
+      <Button layoutX="332.0" layoutY="520.0" mnemonicParsing="false" onAction="#chooseFile" text="File" />
+      <Button layoutX="394.0" layoutY="519.0" mnemonicParsing="false" onAction="#skipTurn" text="Skip" />
+      <TextField fx:id="skipTxt" layoutX="461.0" layoutY="520.0" prefHeight="25.0" prefWidth="36.0" />
+      <Label fx:id="playerLbl" layoutX="319.0" layoutY="552.0" prefHeight="17.0" prefWidth="53.0" />
+   </children>
+</AnchorPane>
